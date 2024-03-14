@@ -46,4 +46,4 @@ Welcome to our Furniture E-Commerce Website repository! This project is a full-s
 
 ## Contributing
 
-We welcome contributions from the community! If you have suggestions for improvements or find any issues, please feel free to open an issue or submit a pull request.
+I welcome contributions from the community! If you have suggestions for improvements or find any issues, please feel free to open an issue or submit a pull request.

@@ -1,43 +1,24 @@
-import React from 'react'
-import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { useProductsContext } from '../context/products_context'
-import { useCartContext } from '../context/cart_context'
-import { useUserContext } from '../context/user_context'
+import React from "react";
+import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { useProductsContext } from "../context/products_context";
+import { useCartContext } from "../context/cart_context";
 const CartButton = () => {
-  const { closeSidebar } = useProductsContext()
-  const { total_items, clearCart } = useCartContext()
-  const { loginWithRedirect, myUser, logout } = useUserContext()
+  const { closeSidebar } = useProductsContext();
+  const { total_items } = useCartContext();
   return (
-    <Wrapper className='cart-btn-wrapper'>
-      <Link to='/cart' className='cart-btn' onClick={closeSidebar}>
+    <Wrapper className="cart-btn-wrapper">
+      <Link to="/cart" className="cart-btn" onClick={closeSidebar}>
         Cart
-        <span className='cart-container'>
+        <span className="cart-container">
           <FaShoppingCart />
-          <span className='cart-value'>{total_items}</span>
+          <span className="cart-value">{total_items}</span>
         </span>
       </Link>
-      {myUser ? (
-        <button
-          type='button'
-          className='auth-btn'
-          onClick={() => {
-            clearCart()
-            localStorage.removeItem('user')
-            logout({ returnTo: window.location.origin })
-          }}
-        >
-          Logout <FaUserMinus />
-        </button>
-      ) : (
-        <button type='button' className='auth-btn' onClick={loginWithRedirect}>
-          Login <FaUserPlus />
-        </button>
-      )}
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.div`
   display: grid;
@@ -91,5 +72,5 @@ const Wrapper = styled.div`
       margin-left: 5px;
     }
   }
-`
-export default CartButton
+`;
+export default CartButton;

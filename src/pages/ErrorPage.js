@@ -23,8 +23,8 @@ const Wrapper = styled.main`
   align-items: center;
   text-align: center;
   section img {
-    width: 500px;
-    height: 300px;
+    width: 50rem;
+    height: 19.5rem;
   }
   h3 {
     text-transform: none;

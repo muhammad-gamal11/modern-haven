@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import heroBcg from "../assets/hero-bcg.jpeg";
-import heroBcg2 from "../assets/hero-bcg-2.jpeg";
+import heroBcg from "../assets/hero-img.svg";
 
 const Hero = () => {
   return (
@@ -24,8 +23,7 @@ const Hero = () => {
         </Link>
       </article>
       <article className="img-container">
-        <img src={heroBcg} alt="table" className="main-img" />
-        <img src={heroBcg2} alt="carpenter" className="accent-img" />
+        <img src={heroBcg} alt="shopping" className="main-img" />
       </article>
     </Wrapper>
   );
